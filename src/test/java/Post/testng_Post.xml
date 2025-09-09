@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/Post/BDDStylePostTestNG.java">
+        <classes>
+            <class name="Post.BDDStylePostTestNG">
+                <methods>
+                    <include name="createtoken"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
