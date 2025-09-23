@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.466">
+           time="1.597">
     <properties></properties>
 
 
 
             <testcase
-                name="gettokenandbookingId"
-                time="6.466"
-                classname="TestNG.TestNG03">
+                name="partialupdate"
+                time="1.597"
+                classname="TestNG.TestNG05">
             </testcase>
 </testsuite>

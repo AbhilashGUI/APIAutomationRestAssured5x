@@ -34,6 +34,11 @@ public class TestNG02 {
         System.out.println("Test");
     }
 
+    @Test
+    public void demo5a()
+    {
+        System.out.println("Test2");
+    }
     @AfterMethod
     public void demo6()
     {

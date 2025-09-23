@@ -15,6 +15,7 @@ public class TestNG03 {
     Response res;
     ValidatableResponse vr;
 
+    //Just fetching the pre-requisites
 @Test
 public void gettokenandbookingId() {
 

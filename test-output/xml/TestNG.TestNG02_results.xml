@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNG02.java"
-           tests="1"
+<testsuite name="APIAutomationRestAssured5X"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.000">
+           time="0.005">
     <properties></properties>
 
 
 
             <testcase
-                name="demo5"
+                name="demo5a"
                 time="0.000"
+                classname="TestNG.TestNG02">
+            </testcase>
+            <testcase
+                name="demo5"
+                time="0.005"
                 classname="TestNG.TestNG02">
             </testcase>
 </testsuite>

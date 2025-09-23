@@ -4,12 +4,12 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="0.021">
+           time="0.024">
     <properties></properties>
 
             <testcase
                 name="testcase1"
-                time="0.021"
+                time="0.022"
                 classname="TestNG.TestNG01">
 
             <failure type="java.lang.AssertionError" message="expected [false] but found [true]">
@@ -22,7 +22,7 @@
 
             <testcase
                 name="testcase2"
-                time="0.000"
+                time="0.002"
                 classname="TestNG.TestNG01">
             </testcase>
 </testsuite>
