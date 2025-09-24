@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNG08.java"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.011">
+    <properties></properties>
+
+
+
+            <testcase
+                name="regressionrun"
+                time="0.011"
+                classname="TestNG.TestNG08">
+            </testcase>
+</testsuite>

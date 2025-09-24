@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured5X"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.017">
+    <properties></properties>
+
+
+
+            <testcase
+                name="getbookingid"
+                time="0.014"
+                classname="TestNG.TestNG11">
+            </testcase>
+            <testcase
+                name="gettoken"
+                time="0.000"
+                classname="TestNG.TestNG11">
+            </testcase>
+            <testcase
+                name="deleterequest"
+                time="0.003"
+                classname="TestNG.TestNG11">
+            </testcase>
+</testsuite>

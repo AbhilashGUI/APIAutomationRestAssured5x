@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured5X"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.015">
+    <properties></properties>
+
+
+
+            <testcase
+                name="logintest"
+                time="0.010"
+                classname="TestNG.TestNG12">
+            </testcase>
+            <testcase
+                name="logintest"
+                time="0.000"
+                classname="TestNG.TestNG12">
+            </testcase>
+            <testcase
+                name="logintest"
+                time="0.005"
+                classname="TestNG.TestNG12">
+            </testcase>
+            <testcase
+                name="logintest"
+                time="0.000"
+                classname="TestNG.TestNG12">
+            </testcase>
+            <testcase
+                name="logintest"
+                time="0.000"
+                classname="TestNG.TestNG12">
+            </testcase>
+</testsuite>

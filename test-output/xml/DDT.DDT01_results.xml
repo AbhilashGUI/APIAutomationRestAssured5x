@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="APIAutomationRestAssured5X"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.011">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testlogindata"
+                time="0.011"
+                classname="DDT.DDT01">
+            </testcase>
+            <testcase
+                name="testlogindata"
+                time="0.000"
+                classname="DDT.DDT01">
+            </testcase>
+            <testcase
+                name="testlogindata"
+                time="0.000"
+                classname="DDT.DDT01">
+            </testcase>
+</testsuite>
