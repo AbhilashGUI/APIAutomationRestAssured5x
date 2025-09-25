@@ -22,8 +22,8 @@ public class DDT01 {
     @Test(dataProvider = "getData",dataProviderClass = UtilExcel.class)
     public void testlogindata(String username, String password)
     {
-        System.out.println("Username "+ username);
-        System.out.println("Password "+ password);
+        System.out.println("Username-- "+ username);
+        System.out.println("Password-- "+ password);
     }
 
 }
