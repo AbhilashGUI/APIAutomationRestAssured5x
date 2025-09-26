@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.013">
+    <properties></properties>
+
+
+
+            <testcase
+                name="test2"
+                time="0.000"
+                classname="ListenerDemo.TC01">
+            </testcase>
+            <testcase
+                name="test1"
+                time="0.013"
+                classname="ListenerDemo.TC01">
+            </testcase>
+</testsuite>

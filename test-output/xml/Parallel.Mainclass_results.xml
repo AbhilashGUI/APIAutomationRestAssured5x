@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X2/src/test/java/Parallel/Mainclass.java"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.005">
+    <properties></properties>
+
+
+
+            <testcase
+                name="testcase1"
+                time="0.003"
+                classname="Parallel.Mainclass">
+            </testcase>
+            <testcase
+                name="testcase3"
+                time="0.001"
+                classname="Parallel.Mainclass">
+            </testcase>
+            <testcase
+                name="testcase2"
+                time="0.001"
+                classname="Parallel.Mainclass">
+            </testcase>
+</testsuite>
