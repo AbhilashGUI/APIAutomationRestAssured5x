@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="5.199">
+           time="5.235">
     <properties></properties>
 
 
 
             <testcase
                 name="testpost"
-                time="5.199"
-                classname="Misc.Gson.Runnerclass">
+                time="5.235"
+                classname="Misc.NonGson.Runnerclass">
             </testcase>
 </testsuite>
