@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/CRUD/Patch"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="4.696">
+    <properties></properties>
+
+
+
+            <testcase
+                name="partialupdate"
+                time="4.696"
+                classname="CRUD.Patch.Partialupdatebooking">
+            </testcase>
+</testsuite>
