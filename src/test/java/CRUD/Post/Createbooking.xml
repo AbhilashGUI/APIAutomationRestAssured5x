@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/Post/BDDStylePostTestNG.java">
+          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/CRUD/Post/Createbooking.java">
         <classes>
-            <class name="Post.BDDStylePostTestNG">
+            <class name="CRUD.Post.Createbooking">
                 <methods>
-                    <include name="createtoken"/>
+                    <include name="createbooking"/>
                 </methods>
             </class>
         </classes>

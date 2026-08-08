@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/CRUD/Post"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.615">
+    <properties></properties>
+
+
+
+            <testcase
+                name="createtoken"
+                time="2.615"
+                classname="CRUD.Post.Createtoken">
+            </testcase>
+</testsuite>

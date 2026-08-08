@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/CRUD/Post/Createbooking.java"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.491">
+    <properties></properties>
+
+
+
+            <testcase
+                name="createbooking"
+                time="2.491"
+                classname="CRUD.Post.Createbooking">
+            </testcase>
+</testsuite>
