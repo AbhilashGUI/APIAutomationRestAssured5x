@@ -1,10 +1,12 @@
-package Get;
+package CRUD.Get;
 
 import io.restassured.RestAssured;
+import org.testng.annotations.Test;
 
-public class BDDStyleGet {
+public class Getlocation {
 
-    public  static void main(String[] args)
+    @Test
+    public void Getlocation()
     {
 
         RestAssured
@@ -12,10 +14,11 @@ public class BDDStyleGet {
                 .baseUri("https://api.zippopotam.us/")
                 .basePath("IN/500023")
 
-                .when().log().all()
+                .when()
                 .get()
 
-                .then().log().all().statusCode(200);
+                .then()
+                .log().all().statusCode(200);
 
     }
 }
