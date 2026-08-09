@@ -2,14 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNG08.java">
+          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/GroupsSetup.java">
         <groups>
             <run>
-                <include name="Sanity"></include>
+                <include name="Smoke"></include>
             </run>
         </groups>
         <classes>
-            <class name="TestNG.TestNG08"/>
+            <class name="TestNG.GroupsSetup"/>
         </classes>
     </test>
 </suite>

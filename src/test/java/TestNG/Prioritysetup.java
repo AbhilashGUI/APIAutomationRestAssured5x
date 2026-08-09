@@ -2,28 +2,29 @@ package TestNG;
 
 import org.testng.annotations.Test;
 
-public class TestNG07 {
+public class Prioritysetup {
 
     @Test(priority = 0)
     public void testcase1()
     {
-        System.out.println("Test1");
+        System.out.println("1");
     }
 
-    @Test(priority = 1)
+    @Test
     public void testcase2()
     {
-        System.out.println("Test2");
+        System.out.println("2");
     }
 
     @Test(priority = -1)
     public void testcase3()
     {
-        System.out.println("Test3");
+        System.out.println("3");
     }
-    @Test
+
+    @Test(priority = 1)
     public void testcase4()
     {
-        System.out.println("Test4");
+        System.out.println("4");
     }
 }

@@ -4,24 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.007">
+           time="0.016">
     <properties></properties>
 
 
 
             <testcase
-                name="Smokerun"
+                name="deletebooking"
                 time="0.001"
-                classname="TestNG.TestNG08">
+                classname="TestNG.PriorityandGroups">
             </testcase>
             <testcase
-                name="regressionrun"
-                time="0.001"
-                classname="TestNG.TestNG08">
+                name="getbookingid"
+                time="0.014"
+                classname="TestNG.PriorityandGroups">
             </testcase>
             <testcase
-                name="Sanityrun"
-                time="0.005"
-                classname="TestNG.TestNG08">
+                name="getoken"
+                time="0.001"
+                classname="TestNG.PriorityandGroups">
             </testcase>
 </testsuite>

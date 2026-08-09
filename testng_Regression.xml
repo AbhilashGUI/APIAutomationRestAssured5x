@@ -9,7 +9,7 @@
             </run>
         </groups>
         <classes>
-            <class name="TestNG.TestNG08"/>
+            <class name="TestNG.GroupsSetup"/>
         </classes>
     </test>
 </suite>

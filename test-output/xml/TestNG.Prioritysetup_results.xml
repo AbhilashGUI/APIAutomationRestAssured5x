@@ -4,7 +4,7 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.010">
+           time="0.009">
     <properties></properties>
 
 
@@ -12,21 +12,21 @@
             <testcase
                 name="testcase3"
                 time="0.007"
-                classname="TestNG.TestNG07">
-            </testcase>
-            <testcase
-                name="testcase2"
-                time="0.001"
-                classname="TestNG.TestNG07">
+                classname="TestNG.Prioritysetup">
             </testcase>
             <testcase
                 name="testcase4"
                 time="0.001"
-                classname="TestNG.TestNG07">
+                classname="TestNG.Prioritysetup">
+            </testcase>
+            <testcase
+                name="testcase2"
+                time="0.001"
+                classname="TestNG.Prioritysetup">
             </testcase>
             <testcase
                 name="testcase1"
-                time="0.001"
-                classname="TestNG.TestNG07">
+                time="0.000"
+                classname="TestNG.Prioritysetup">
             </testcase>
 </testsuite>

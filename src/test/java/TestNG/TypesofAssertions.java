@@ -4,14 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class TestNG09 {
+public class TypesofAssertions {
 
     @Test
     public void testcase1()
     {
-       /** SoftAssert sr=new SoftAssert();
+        SoftAssert sr=new SoftAssert();
         sr.assertEquals("true","false","True should not be false");
-        System.out.println("Please execute me");**/
+        System.out.println("Please execute me");
 
 
         //Since we are using the softassertions, able to execute though the ar!=er

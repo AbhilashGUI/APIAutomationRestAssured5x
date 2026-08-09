@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNG08.java"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.010">
+    <properties></properties>
+
+
+
+            <testcase
+                name="Regressionrun"
+                time="0.009"
+                classname="TestNG.GroupsSetup">
+            </testcase>
+            <testcase
+                name="Sanityrun"
+                time="0.001"
+                classname="TestNG.GroupsSetup">
+            </testcase>
+</testsuite>
