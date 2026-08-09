@@ -2,11 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNG02.java">
+          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/TestNG/TestNGAnnotations.java">
         <classes>
-            <class name="TestNG.TestNG02">
+            <class name="TestNG.TestNGAnnotations">
                 <methods>
-                    <include name="demo5"/>
+                    <include name="testcase1"/>
+                    <include name="testcase2"/>
                 </methods>
             </class>
         </classes>

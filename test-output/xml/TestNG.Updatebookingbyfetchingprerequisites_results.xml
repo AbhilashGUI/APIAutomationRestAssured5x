@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.726">
+           time="1.718">
     <properties></properties>
 
 
 
             <testcase
-                name="gettokenandbookingId"
-                time="3.726"
-                classname="TestNG.TestNG03">
+                name="updatebooking"
+                time="1.718"
+                classname="TestNG.Updatebookingbyfetchingprerequisites">
             </testcase>
 </testsuite>

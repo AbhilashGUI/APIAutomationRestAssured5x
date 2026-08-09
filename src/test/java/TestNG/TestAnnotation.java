@@ -3,18 +3,18 @@ package TestNG;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestNG01 {
+public class TestAnnotation {
 
 
     @Test
     public void testcase1()
     {
-        Assert.assertEquals(true,false);
+        Assert.assertEquals(true,true);
     }
 
     @Test
     public void testcase2()
     {
-        Assert.assertEquals(true, true);
+        Assert.assertEquals(false,true);
     }
 }
