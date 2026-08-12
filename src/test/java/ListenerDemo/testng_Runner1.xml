@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true"
-          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/Parallel/ParallelExecution.java">
+          name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/ListenerDemo/Listenerrun.java">
         <classes>
-            <class name="Parallel.ParallelExecution">
+            <class name="ListenerDemo.Listenerrun">
                 <methods>
                     <include name="testcase1"/>
                     <include name="testcase2"/>

@@ -5,16 +5,18 @@ import org.testng.ISuiteListener;
 
 public class Customlistener2 implements IExecutionListener, ISuiteListener {
 
-    public void  onExecutionFinish()
-    {
+
+    public void onexecutionStart() {
+
+        long startime = System.currentTimeMillis();
+        System.out.println("Start time " + startime);
+    }
+
+    public void onexecutionfinish() {
+
         long endtime=System.currentTimeMillis();
-        System.out.println("--Finished execution at--"+endtime);
-
+        System.out.println("end time "+endtime);
     }
 
-    public void onExecutionStart()
-    {
-        long starttime= System.currentTimeMillis();
-        System.out.println("--Started execution at--"+starttime);
-    }
+
 }

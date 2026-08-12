@@ -4,14 +4,14 @@
     <test verbose="2" preserve-order="true"
           name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/Parallel/Mainclass.java">
         <classes>
-            <class name="Parallel.Mainclass">
+            <class name="Parallel.PE">
             </class>
         </classes>
     </test>
 <test verbose="2" preserve-order="false"
       name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X2/src/test/java/Parallel/Mainclass.java">
 <classes>
-    <class name="Parallel.Mainclass">
+    <class name="Parallel.PE">
     </class>
 </classes>
 </test>
