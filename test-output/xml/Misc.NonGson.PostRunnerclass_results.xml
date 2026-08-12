@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.136">
+           time="3.147">
     <properties></properties>
 
 
 
             <testcase
-                name="postrequsingmap"
-                time="3.136"
-                classname="Misc.Payloadusingmap">
+                name="pojopostreq"
+                time="3.147"
+                classname="Misc.NonGson.PostRunnerclass">
             </testcase>
 </testsuite>

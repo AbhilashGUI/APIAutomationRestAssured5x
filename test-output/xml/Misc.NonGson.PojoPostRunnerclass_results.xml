@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.136">
+           time="3.214">
     <properties></properties>
 
 
 
             <testcase
-                name="postrequsingmap"
-                time="3.136"
-                classname="Misc.Payloadusingmap">
+                name="Pojopostreq"
+                time="3.214"
+                classname="Misc.NonGson.PojoPostRunnerclass">
             </testcase>
 </testsuite>

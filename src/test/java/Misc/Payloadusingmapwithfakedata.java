@@ -1,5 +1,6 @@
 package Misc;
 
+import com.github.javafaker.Faker;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -10,8 +11,7 @@ import org.testng.annotations.Test;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Payloadusingmap {
-
+public class Payloadusingmapwithfakedata {
 
     RequestSpecification req;
     Response res;
@@ -19,26 +19,28 @@ public class Payloadusingmap {
     Integer bookingId;
 
     @Test
-    public void postrequsingmap()
+    public void postrequsingmap2()
     {
-        Map<String,Object> jsonpayloadusingmap=new LinkedHashMap<>();
-        jsonpayloadusingmap.put("firstname","Abhilash");
-        jsonpayloadusingmap.put("lastname","Sharma");
-        jsonpayloadusingmap.put("totalprice",142);
-        jsonpayloadusingmap.put("depositpaid",true);
+        Map<String, Object> jsonpayloadfakedata=new LinkedHashMap<>();
+        Faker faker= new Faker();
+        jsonpayloadfakedata.put("firstname",faker.name().firstName());
+        jsonpayloadfakedata.put("lastname",faker.name().lastName());
+        jsonpayloadfakedata.put("totalprice",faker.random().nextInt(100));
+        jsonpayloadfakedata.put("depositpaid",faker.random().nextBoolean());
 
-        Map<String,Object> Bookingdates=new LinkedHashMap<>();
+
+        Map<String,Object> Bookingdates= new LinkedHashMap<>();
         Bookingdates.put("checkin","2024-03-19");
         Bookingdates.put("checkout","2024-06-20");
-        jsonpayloadusingmap.put("bookingdates",Bookingdates);
-        jsonpayloadusingmap.put("additionalneeds","Breakfast");
+        jsonpayloadfakedata.put("bookingdates",Bookingdates);
+        jsonpayloadfakedata.put("additionalneeds","Lunch");
 
 
         req= RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/booking");
         req.contentType(ContentType.JSON);
-        req.body(jsonpayloadusingmap).log().all();
+        req.body(jsonpayloadfakedata).log().all();
 
         res=req.when().post();
 
