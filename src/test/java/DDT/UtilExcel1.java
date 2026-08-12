@@ -11,39 +11,43 @@ import java.io.IOException;
 
 public class UtilExcel1 {
 
+
     static Workbook book;
     static Sheet sheet;
-    public static String Filename = "src/test/java/DDT/Test Data1.xlsx";
+    public static String File_Name="src/test/java/DDT/Test Data1.xlsx";
 
-    public static Object[][] usercred(String sheetname) {
-        FileInputStream file = null;
+    public static Object[][] mobilelogincred(String SheetName)
+    {
+        FileInputStream file=null;
 
         try {
-            file = new FileInputStream(Filename);
+            file= new FileInputStream(File_Name);
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
+           e.printStackTrace();
         }
+
         try {
-            book = WorkbookFactory.create(file);
+            book= WorkbookFactory.create(file);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
-        sheet = book.getSheet(sheetname);
-        Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
-
-        for (int i = 0; i < sheet.getLastRowNum(); i++) {
-            for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
-
-                data[i][j] = sheet.getRow(i + 1).getCell(j).toString();
+         sheet=book.getSheet(SheetName);
+        Object[][] data= new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+        for (int i=0;i< sheet.getLastRowNum();i++)
+        {
+            for(int j=0;j<sheet.getRow(0).getLastCellNum();j++)
+            {
+                data[i][j]=sheet.getRow(1+i).getCell(j).toString();
             }
-
         }
         return data;
+
     }
 
     @DataProvider
-    public Object[][] getdata()
-    {
-        return usercred("Sheet1");
-    }
+     public Object[][] getdata()
+     {
+        return mobilelogincred("Sheet1");
+     }
+
 }

@@ -3,7 +3,8 @@ package DDT;
 import org.testng.annotations.Test;
 
 public class DDT01 {
-    // Test Data to be read from the Excel File - Data Provider
+
+// Test Data to be read from the Excel File - Data Provider
     // Apache POI, - 60-70% - little difficult to understand first time.
     // Fillo Library - 30% - Super Easy!
 
@@ -19,11 +20,11 @@ public class DDT01 {
     // JSON file it will be different
     // JSON Object -> Gson, Jackson you can use
 
-    @Test(dataProvider = "getData",dataProviderClass = UtilExcel.class)
-    public void testlogindata(String username, String password)
-    {
-        System.out.println("Username-- "+ username);
-        System.out.println("Password-- "+ password);
-    }
 
+    @Test(dataProvider = "getdata",dataProviderClass = UtilExcel.class)
+    public void testuserlogin(String Username,String Password)
+    {
+        System.out.println("Username--"+ Username);
+        System.out.println("Password--"+Password);
+    }
 }
