@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="APIAutomationRestAssured5X"
-           tests="3"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="0.006">
+           time="0.007">
     <properties></properties>
 
 
 
             <testcase
                 name="testuserlogin"
-                time="0.004"
+                time="0.007"
                 classname="DDT.DDT01">
             </testcase>
             <testcase
                 name="testuserlogin"
-                time="0.001"
-                classname="DDT.DDT01">
-            </testcase>
-            <testcase
-                name="testuserlogin"
-                time="0.001"
+                time="0.000"
                 classname="DDT.DDT01">
             </testcase>
 </testsuite>

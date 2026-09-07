@@ -4,16 +4,11 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.007">
+           time="0.005">
     <properties></properties>
 
 
 
-            <testcase
-                name="loginviaotp"
-                time="0.006"
-                classname="DDT.DDT02">
-            </testcase>
             <testcase
                 name="loginviaotp"
                 time="0.000"
@@ -22,6 +17,11 @@
             <testcase
                 name="loginviaotp"
                 time="0.001"
+                classname="DDT.DDT02">
+            </testcase>
+            <testcase
+                name="loginviaotp"
+                time="0.004"
                 classname="DDT.DDT02">
             </testcase>
 </testsuite>
