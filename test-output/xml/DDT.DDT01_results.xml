@@ -11,12 +11,12 @@
 
             <testcase
                 name="testuserlogin"
-                time="0.007"
+                time="0.002"
                 classname="DDT.DDT01">
             </testcase>
             <testcase
                 name="testuserlogin"
-                time="0.000"
+                time="0.005"
                 classname="DDT.DDT01">
             </testcase>
 </testsuite>

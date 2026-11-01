@@ -4,10 +4,13 @@ import io.restassured.RestAssured;
 
 public class RATestcase {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
+
         RestAssured
                 .given()
-                .baseUri("https://api.zippopotam.us/").basePath("IN/500044")
+                .baseUri("https://api.zippopotam.us")
+                .basePath("/IN/500014")
 
                 .when().log().all()
                 .get()
@@ -15,7 +18,7 @@ public class RATestcase {
                 .then().log().all()
                 .statusCode(200);
 
-
     }
-
 }
+
+//

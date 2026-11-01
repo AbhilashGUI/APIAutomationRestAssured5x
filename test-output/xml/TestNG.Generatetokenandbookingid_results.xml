@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="4.358">
+           time="3.318">
     <properties></properties>
 
 
 
             <testcase
                 name="tokenandbookingid"
-                time="4.358"
+                time="3.318"
                 classname="TestNG.Generatetokenandbookingid">
             </testcase>
 </testsuite>

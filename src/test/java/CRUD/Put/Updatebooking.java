@@ -10,17 +10,15 @@ import org.testng.annotations.Test;
 
 public class Updatebooking {
 
-    RequestSpecification rs;
-    Response rp;
-    ValidatableResponse vr;
-    String token="ffa9048ba359c7c";
+    RequestSpecification req;
+    Response res;
+    ValidatableResponse var;
+    String token="f71492e89dd5e7b";
 
     @Test
-
-    public void Fullupdate()
+    public void fullupdate()
     {
-
-        String payload= "{\n" +
+        String payload="{\n" +
                 "    \"firstname\" : \"Amith\",\n" +
                 "    \"lastname\" : \"Kumar\",\n" +
                 "    \"totalprice\" : 175,\n" +
@@ -31,20 +29,22 @@ public class Updatebooking {
                 "    },\n" +
                 "    \"additionalneeds\" : \"Lunch\"\n" +
                 "}";
-        rs= RestAssured.given();
-        rs.baseUri("https://restful-booker.herokuapp.com");
-        rs.basePath("/booking/1359");
-        rs.contentType(ContentType.JSON);
-        rs.cookie("token",token);
-        rs.body(payload);
 
-        rp=rs.when().put();
 
-        vr=rp.then().log().all();
-        vr.statusCode(200);
-        vr.body("firstname", Matchers.equalTo("Amith"));
-        vr.body("lastname",Matchers.equalTo("Kumar"));
+        req=RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking/1596");
+        req.contentType(ContentType.JSON);
+        req.cookie("token",token);
+        req.body(payload);
 
+
+        res=req.when().put();
+
+        var=res.then().log().all();
+        var.statusCode(200);
+        var.body("firstname",Matchers.equalTo("Amith"));
+        var.body("lastname",Matchers.equalTo("Kumar"));
 
 
 
@@ -52,4 +52,5 @@ public class Updatebooking {
 
 
     }
+
 }

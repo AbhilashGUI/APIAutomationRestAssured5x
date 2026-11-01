@@ -8,23 +8,23 @@ import org.testng.annotations.Test;
 
 public class Deletebooking {
 
-    RequestSpecification rs;
-    Response rp;
-    ValidatableResponse vr;
-    String token="57948afd8262b3c";
+    RequestSpecification req;
+    Response res;
+    ValidatableResponse var;
+    String token="d561063692f323c";
 
      @Test
     public void deletebooking()
      {
-         rs= RestAssured.given();
-         rs.baseUri("https://restful-booker.herokuapp.com");
-         rs.basePath("/booking/2303");
-         rs.cookie("token",token);
+         req= RestAssured.given();
+         req.baseUri("https://restful-booker.herokuapp.com");
+         req.basePath("/booking/618");
+         req.cookie("token",token);
 
-         rp=rs.when().delete();
+         res=req.when().delete();
 
-         vr=rp.then().log().all();
-         vr.statusCode(201);
+         var=res.then().log().all();
+         var.statusCode(201);
 
      }
 }

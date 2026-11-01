@@ -8,18 +8,19 @@ import org.testng.annotations.Test;
 
 public class Getbooking {
 
+
     @Test
-
-    public void Getbooking()
+    public void getbooking()
     {
+        RequestSpecification req=RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking/618");
 
-        RequestSpecification rs= RestAssured.given();
-        rs.baseUri("https://restful-booker.herokuapp.com");
-        rs.basePath("/booking/751");
+        Response res=req.when().get();
 
-        Response rp=rs.when().get();
-
-        ValidatableResponse vr=rp.then().log().all().statusCode(200);
+        ValidatableResponse var=res.then().log().all();
+        String Bookingfetch=res.asString();
+        System.out.println("Booking check"+Bookingfetch);
+        var.statusCode(200);
     }
-
 }

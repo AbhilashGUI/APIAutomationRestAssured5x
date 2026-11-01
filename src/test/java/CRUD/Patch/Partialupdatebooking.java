@@ -10,10 +10,10 @@ import org.testng.annotations.Test;
 
 public class Partialupdatebooking
 {
-    RequestSpecification rs;
-    Response rp;
-    ValidatableResponse vr;
-    String token="0ba82f9247950a9";
+    RequestSpecification req;
+    Response res;
+    ValidatableResponse var;
+    String token="d561063692f323c";
 
 
     @Test
@@ -25,19 +25,19 @@ public class Partialupdatebooking
                 "    \"lastname\" : \"Sree\"\n" +
                 "}";
 
-        rs= RestAssured.given();
-        rs.baseUri("https://restful-booker.herokuapp.com");
-        rs.basePath("/booking/4844");
-        rs.contentType(ContentType.JSON);
-        rs.cookie("token",token);
-        rs.body(payload).log().all();
+        req= RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking/618");
+        req.contentType(ContentType.JSON);
+        req.cookie("token",token);
+        req.body(payload).log().all();
 
-        rp=rs.when().patch();
+        res=req.when().patch();
 
-        vr=rp.then().log().all();
-        vr.statusCode(200);
-        vr.body("firstname", Matchers.equalTo("Shreyansh"));
-        vr.body("lastname", Matchers.equalTo("Sree"));
+        var=res.then().log().all();
+        var.statusCode(200);
+        var.body("firstname", Matchers.equalTo("Shreyansh"));
+        var.body("lastname", Matchers.equalTo("Sree"));
 
 
 

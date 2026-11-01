@@ -11,34 +11,34 @@ public class Createtoken2 {
 
 
     //BDD Style
-    @Test
-    public void  createtoken2()
-    {
 
+    @Test
+    public void createtoken2()
+    {
         String payload2="{\n" +
                 "    \"username\":\"admin\",\n" +
                 "    \"password\":\"password123\"\n" +
                 "\n" +
                 "}";
 
-       //Represents the request configuration
-        RequestSpecification rs= RestAssured.given();
-        rs.baseUri("https://restful-booker.herokuapp.com");
-        rs.basePath("/auth");
-        rs.contentType(ContentType.JSON);
-        rs.body(payload2);
-
-       //Represents actual response received from API
-        Response rp=rs.when().post();
+        RequestSpecification req=RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/auth");
+        req.contentType(ContentType.JSON);
+        req.body(payload2);
 
 
-       //Used to perform assertions/ Validations on response
-        ValidatableResponse vr= rp.then();
-        String token= rp.asString();
+        Response rp=req.when().post();
+
+        ValidatableResponse vr=rp.then();
+        String token=rp.asString();
         System.out.println("Token "+token);
         vr.statusCode(200);
 
 
 
+
+
     }
-}
+
+   }

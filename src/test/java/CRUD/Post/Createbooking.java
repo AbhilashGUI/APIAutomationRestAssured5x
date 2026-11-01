@@ -9,12 +9,9 @@ import org.testng.annotations.Test;
 
 public class Createbooking {
 
-
     @Test
-    public void createbooking()
-    {
-
-        String payload3= "{\n" +
+    public void createbooking() {
+        String payload = "{\n" +
                 "    \"firstname\" : \"Abhilash\",\n" +
                 "    \"lastname\" : \"Sharma\",\n" +
                 "    \"totalprice\" : 142,\n" +
@@ -26,20 +23,21 @@ public class Createbooking {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
 
-        RequestSpecification rs= RestAssured.given();
-        rs.baseUri("https://restful-booker.herokuapp.com");
-        rs.basePath("/booking");
-        rs.contentType(ContentType.JSON);
-        rs.body(payload3);
+        //request configuration
+        RequestSpecification req = RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking");
+        req.contentType(ContentType.JSON);
+        req.body(payload);
 
-        Response rp= rs.when().post();
+        //Execution
+        Response res=req.when().post();
 
-        ValidatableResponse vr= rp.then();
-        String bookingdetails= rp.asString();
-        System.out.println(bookingdetails);
-        vr.statusCode(200);
-
-
+        //Validation
+        ValidatableResponse var=res.then();
+        String bookingdetails=res.asString();
+        System.out.println("Booking details: "+bookingdetails);
+        var.statusCode(200);
 
     }
 }
