@@ -13,7 +13,9 @@ public class Updatebooking {
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
-    String token="f71492e89dd5e7b";
+    String token="243dd785901744e";
+
+
 
     @Test
     public void fullupdate()
@@ -33,24 +35,23 @@ public class Updatebooking {
 
         req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
-        req.basePath("/booking/1596");
+        req.basePath("/booking/1402");
         req.contentType(ContentType.JSON);
         req.cookie("token",token);
         req.body(payload);
 
-
         res=req.when().put();
 
-        var=res.then().log().all();
+        var=res.then();
+        String Updateddetails=res.asString();
+        System.out.println(Updateddetails);
         var.statusCode(200);
         var.body("firstname",Matchers.equalTo("Amith"));
-        var.body("lastname",Matchers.equalTo("Kumar"));
-
-
-
-
+        var.body("lastname", Matchers.equalTo("Kumar"));
 
 
     }
 
+
 }
+

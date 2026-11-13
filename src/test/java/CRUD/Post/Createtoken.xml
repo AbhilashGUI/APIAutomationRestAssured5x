@@ -9,7 +9,7 @@
                     <include name="createtoken"/>
                 </methods>
             </class>
-            <class name="CRUD.Post.Createtoken2">
+            <class name="CRUD.Post.Createtoken">
                 <methods>
                     <include name="createtoken2"/>
                 </methods>

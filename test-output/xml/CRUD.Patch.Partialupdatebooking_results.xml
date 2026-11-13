@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.757">
+           time="2.916">
     <properties></properties>
 
 
 
             <testcase
-                name="partialupdate"
-                time="2.757"
+                name="minorupdate"
+                time="2.916"
                 classname="CRUD.Patch.Partialupdatebooking">
             </testcase>
 </testsuite>

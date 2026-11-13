@@ -12,49 +12,53 @@ import java.io.IOException;
 public class UtilExcel {
 
     //Workbook, Sheet, Row and Column, CellS
-    //Open Stream
+    //Open the Stream
     //Understand Workbook
-    //Sheet
-    //Row, Column
+    //Open the Sheet
+    //Read Rows, Columns
     //Cells
-    //Close Stream - give data to the Object[][]
+    //Close Stream - give data to the Object[][] (2dArray)
 
-    static Workbook book;
-    static Sheet sheet;
-    public static String File_name="src/test/java/DDT/Test Data.xlsx";
 
-    public static Object[][] gettestdata(String Sheetname)
-    {
-        FileInputStream file=null;
+   static Workbook workbook;
+   static Sheet sheet;
 
-        try {
-            file=new FileInputStream(File_name);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+   public static String filepath="src/test/java/DDT/Test Data.xlsx";
 
-        try {
-            book= WorkbookFactory.create(file);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-            sheet=book.getSheet(Sheetname);
+   public static Object[][] gettestdata(String Sheetname)
+   {
+       FileInputStream file=null;
 
-        Object[][] data=new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
-        for (int i=0;i< sheet.getLastRowNum();i++)
-        {
-            for (int j=0;j<sheet.getRow(0).getLastCellNum();j++)
-            {
-                data[i][j]=sheet.getRow(i+1).getCell(j).toString();
-            }
-        }
+       try {
+           file=new FileInputStream(filepath);
+       } catch (FileNotFoundException e) {
+           throw new RuntimeException(e);
+       }
 
-        return data;
+       try {
+           workbook= WorkbookFactory.create(file);
+       } catch (IOException e) {
+           throw new RuntimeException(e);
+       }
 
-        }
-        @DataProvider
-        public Object[][] getdata()
-        {
-            return gettestdata("Sheet1");
-        }
-    }
+       sheet= workbook.getSheet(Sheetname);
+
+       Object[][] data=new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
+
+       for (int i=0;i< sheet.getLastRowNum();i++)
+       {
+           for (int j=0; j<sheet.getRow(0).getLastCellNum();j++)
+           {
+
+       data[i][j]=sheet.getRow(i+1).getCell(j).toString();
+           }
+       }
+       return data;
+   }
+
+   @DataProvider
+    public  Object[][] getdata()
+   {
+       return  gettestdata("Sheet1");
+   }
+}

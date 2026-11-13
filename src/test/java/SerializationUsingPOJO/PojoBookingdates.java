@@ -1,4 +1,4 @@
-package Misc.NonGson; ;
+package SerializationUsingPOJO;
 
 import javax.annotation.processing.Generated;
 import com.google.gson.annotations.Expose;

@@ -28,3 +28,5 @@ public class Prioritysetup {
         System.out.println("4");
     }
 }
+
+//checked

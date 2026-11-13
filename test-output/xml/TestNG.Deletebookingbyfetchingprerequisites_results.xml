@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="APIAutomationRestAssured5X"
-           tests="1"
+           tests="2"
            failures="0"
            errors="0"
            skipped="0"
-           time="1.138">
+           time="2.208">
     <properties></properties>
 
 
 
             <testcase
-                name="deletbooking"
-                time="1.138"
+                name="fetchthedeletedbooking"
+                time="0.918"
+                classname="TestNG.Deletebookingbyfetchingprerequisites">
+            </testcase>
+            <testcase
+                name="deletetoken"
+                time="1.290"
                 classname="TestNG.Deletebookingbyfetchingprerequisites">
             </testcase>
 </testsuite>

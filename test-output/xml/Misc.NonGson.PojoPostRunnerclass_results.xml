@@ -12,6 +12,6 @@
             <testcase
                 name="Pojopostreq"
                 time="3.214"
-                classname="Misc.NonGson.PojoPostRunnerclass">
+                classname="SerializationUsingPOJO.Createbookingrunnerclass">
             </testcase>
 </testsuite>

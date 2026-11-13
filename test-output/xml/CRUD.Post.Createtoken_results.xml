@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.125">
+           time="2.184">
     <properties></properties>
 
 
 
             <testcase
                 name="createtoken"
-                time="2.125"
+                time="2.184"
                 classname="CRUD.Post.Createtoken">
             </testcase>
 </testsuite>

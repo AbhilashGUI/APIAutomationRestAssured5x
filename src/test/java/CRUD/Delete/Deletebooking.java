@@ -11,14 +11,14 @@ public class Deletebooking {
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
-    String token="d561063692f323c";
+    String token="21be38f48d2ebb0";
 
      @Test
     public void deletebooking()
      {
          req= RestAssured.given();
          req.baseUri("https://restful-booker.herokuapp.com");
-         req.basePath("/booking/618");
+         req.basePath("/booking/2295");
          req.cookie("token",token);
 
          res=req.when().delete();

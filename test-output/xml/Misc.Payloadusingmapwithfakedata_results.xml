@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.340">
+           time="3.125">
     <properties></properties>
 
 
 
             <testcase
-                name="postrequsingmap2"
-                time="3.340"
-                classname="Misc.Payloadusingmapwithfakedata">
+                name="postrequsingrandomdata"
+                time="3.125"
+                classname="Serialization.Createbookingusingmapwithfakedata">
             </testcase>
 </testsuite>

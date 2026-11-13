@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/Parallel/ParallelExecution.java"
+<testsuite name="APIAutomationRestAssured5X"
            tests="2"
            failures="0"
            errors="0"
@@ -10,13 +10,13 @@
 
 
             <testcase
-                name="testcase1"
-                time="0.002"
+                name="testcase2"
+                time="0.001"
                 classname="Parallel.ParallelExecution">
             </testcase>
             <testcase
-                name="testcase2"
-                time="0.001"
+                name="testcase1"
+                time="0.002"
                 classname="Parallel.ParallelExecution">
             </testcase>
 </testsuite>

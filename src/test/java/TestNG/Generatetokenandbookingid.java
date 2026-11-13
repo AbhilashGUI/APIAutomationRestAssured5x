@@ -12,13 +12,13 @@ public class Generatetokenandbookingid {
         RequestSpecification req;
         Response res;
         ValidatableResponse var;
-        String Token;
-        int bookingId;
+        String token;
+        int bookingid;
 
         @Test
-        public void tokenandbookingid() {
-
-                String authpayload = "{\n" +
+        public void generatetokenandbookingid()
+        {
+                String payload="{\n" +
                         "    \"username\":\"admin\",\n" +
                         "    \"password\":\"password123\"\n" +
                         "\n" +
@@ -28,17 +28,16 @@ public class Generatetokenandbookingid {
                 req.baseUri("https://restful-booker.herokuapp.com");
                 req.basePath("/auth");
                 req.contentType(ContentType.JSON);
-                req.body(authpayload).log().all();
+                req.body(payload);
 
                 res=req.when().post();
 
                 var=res.then().log().all();
                 var.statusCode(200);
-                Token= res.asString();
-                System.out.println(Token);
+                token=res.asString();
+                System.out.println(token);
 
-
-                String reqpayload="{\n" +
+                String payload2="{\n" +
                         "    \"firstname\" : \"Abhilash\",\n" +
                         "    \"lastname\" : \"Sharma\",\n" +
                         "    \"totalprice\" : 142,\n" +
@@ -50,20 +49,22 @@ public class Generatetokenandbookingid {
                         "    \"additionalneeds\" : \"Breakfast\"\n" +
                         "}";
 
+
                 req=RestAssured.given();
                 req.baseUri("https://restful-booker.herokuapp.com");
                 req.basePath("/booking");
                 req.contentType(ContentType.JSON);
-                req.body(reqpayload).log().all();
+                req.body(payload2);
 
 
                 res=req.when().post();
 
-                var=res.then().log().all();
+                var=res.then();
                 var.statusCode(200);
-                bookingId= res.jsonPath().getInt("bookingid");
-                System.out.println(bookingId);
+                bookingid=res.jsonPath().getInt("bookingid");
+                System.out.println(bookingid);
 
 
         }
+
 }

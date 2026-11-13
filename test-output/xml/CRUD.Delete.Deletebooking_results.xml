@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.146">
+           time="2.405">
     <properties></properties>
 
 
 
             <testcase
                 name="deletebooking"
-                time="2.146"
+                time="2.405"
                 classname="CRUD.Delete.Deletebooking">
             </testcase>
 </testsuite>

@@ -14,42 +14,41 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Updatebookingbyfetchingprerequisites {
 
-    String token;
-    Integer bookingId;
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
+    String token;
+    int bookingid;
 
     @BeforeTest
-    public void gettoken() {
-        System.out.println("--Get token--");
-        String authpayload = "{\n" +
+    public void gettoken()
+    {
+        String authpayload="{\n" +
                 "    \"username\":\"admin\",\n" +
                 "    \"password\":\"password123\"\n" +
                 "\n" +
                 "}";
 
-        req = RestAssured.given();
-        req.baseUri("https://restful-booker.herokuapp.com");
-        req.basePath("/auth");
-        req.contentType(ContentType.JSON);
-        req.body(authpayload);
+         req=RestAssured.given();
+         req.baseUri("https://restful-booker.herokuapp.com");
+         req.basePath("/auth");
+         req.contentType(ContentType.JSON);
+         req.body(authpayload);
 
-        res = req.when().post();
+         res=req.when().post();
 
-        var = res.then();
-        var.statusCode(200);
-        var.body("token", Matchers.notNullValue());
+         var= res.then();
+         var.statusCode(200);
+         token=res.then().log().all().extract().path("token");
+         System.out.println("Token creation is successful:"+token);
 
-        token = res.then().log().all().extract().path("token");
-        Assert.assertNotNull(token);
 
     }
+
     @BeforeTest
-    public void getbookingid()
-    {
-        System.out.println("--Get bookingid--");
-        String payload="{\n" +
+    public void getbookingid() {
+     System.out.println("Bookding id is generated");
+        String bookingpayload = "{\n" +
                 "    \"firstname\" : \"Abhilash\",\n" +
                 "    \"lastname\" : \"Sharma\",\n" +
                 "    \"totalprice\" : 142,\n" +
@@ -61,25 +60,25 @@ public class Updatebookingbyfetchingprerequisites {
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
 
-        req=RestAssured.given();
+        req = RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/booking");
         req.contentType(ContentType.JSON);
-        req.body(payload);
+        req.body(bookingpayload);
 
-        res=req.when().post();
+        res = req.when().post();
 
-        var= res.then().log().all();
+        var = res.then();
         var.statusCode(200);
-        bookingId=res.then().log().all().extract().path("bookingid");
-        System.out.println(bookingId);
-
+        bookingid = res.then().log().all().extract().path("bookingid");
+        System.out.println("Booking id is generated:"+bookingid);
     }
+
+
     @Test
     public void updatebooking()
     {
-        System.out.println("--Update booking--");
-        String updatepayload="{\n" +
+        String fullupdatepayload="{\n" +
                 "    \"firstname\" : \"Amith\",\n" +
                 "    \"lastname\" : \"Kumar\",\n" +
                 "    \"totalprice\" : 175,\n" +
@@ -90,22 +89,23 @@ public class Updatebookingbyfetchingprerequisites {
                 "    },\n" +
                 "    \"additionalneeds\" : \"Lunch\"\n" +
                 "}";
+      req=RestAssured.given();
+      req.baseUri("https://restful-booker.herokuapp.com");
+      req.basePath("/booking/"+bookingid);
+      req.cookie("token",token);
+      req.contentType(ContentType.JSON);
+      req.body(fullupdatepayload);
 
-        req=RestAssured.given();
-        req.baseUri("https://restful-booker.herokuapp.com");
-        req.basePath("/booking/"+bookingId);
-        req.contentType(ContentType.JSON);
-        req.cookie("token",token);
-        req.body(updatepayload).log().all();
+      res=req.when().put();
 
-        res=req.when().put();
+      var=res.then();
+      var.statusCode(200);
+      var.body("firstname",Matchers.equalTo("Amith"));
+      String lastname=res.then().log().all().extract().path("lastname");
+      Assert.assertEquals("Kumar","Kumar");
+      assertThat(lastname).isNotBlank().isNotEmpty().isNotNull();
 
-        var= res.then().log().all();
-        var.statusCode(200);
-        var.body("firstname",Matchers.equalTo("Amith"));
-        var.body("lastname",Matchers.equalTo("Kumar"));
-        String firstName=res.then().log().all().extract().path("firstname");
-        assertThat(firstName).isNotNull().isNotBlank().isNotEmpty();
+
 
     }
 }

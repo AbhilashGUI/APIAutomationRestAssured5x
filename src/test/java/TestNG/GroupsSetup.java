@@ -16,7 +16,7 @@ public class GroupsSetup {
     public void Sanityrun()
     {
         System.out.println("Senior Test engineer");
-        System.out.println("Super Senior Test engineer");
+        System.out.println("Senior2Senior Test engineer");
     }
 
     @Test(groups = {"Regression","Automationscripts"})

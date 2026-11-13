@@ -19,5 +19,8 @@ public class TypesofAssertions {
         //Hardasseration
         Assert.assertEquals("true","false","Failed");
         System.out.println("This will not print");
+
+
+        //We generally use hard assertions throughout the framework
     }
 }

@@ -11,7 +11,7 @@ public class PriorityandGroups {
         System.out.println("Token is generated");
     }
 
-    @Test(groups = {"reuired"},priority = -1)
+    @Test(groups = {"required"},priority = -1)
     public void getbookingid()
     {
         System.out.println("Booking id is readable");
@@ -24,3 +24,5 @@ public class PriorityandGroups {
     }
 
 }
+
+//checked

@@ -11,43 +11,39 @@ import org.testng.annotations.Test;
 
 public class Partialupdatebyfetchingprerequisites {
 
-    String token;
-    Integer bookingId;
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
-
+    String token;
+    int bookingid;
 
     @BeforeTest
-    public void gettoken()
-    {
-        System.out.println("--Get token--");
-
-        String authpayload="{\n" +
+    public void gettoken() {
+        String authpayload = "{\n" +
                 "    \"username\":\"admin\",\n" +
                 "    \"password\":\"password123\"\n" +
                 "\n" +
                 "}";
-        req= RestAssured.given();
+
+        req = RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/auth");
         req.contentType(ContentType.JSON);
         req.body(authpayload);
 
-        res=req.when().post();
+        res = req.when().post();
 
-        var=res.then();
+        var = res.then();
         var.statusCode(200);
-        token=res.then().log().all().extract().path("token");
-        System.out.println(token);
+        token = res.then().log().all().extract().path("token");
+        System.out.println("Token generation is successful :"+token);
 
     }
 
     @BeforeTest
-    public void getbookigid()
+    public void getbookingid()
     {
-        System.out.println("--Get bookingId--");
-        String postpayload="{\n" +
+        String bookingpayload="{\n" +
                 "    \"firstname\" : \"Abhilash\",\n" +
                 "    \"lastname\" : \"Sharma\",\n" +
                 "    \"totalprice\" : 142,\n" +
@@ -57,43 +53,46 @@ public class Partialupdatebyfetchingprerequisites {
                 "        \"checkout\" : \"2024-06-20\"\n" +
                 "    },\n" +
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
-                "}";
+              "}";
 
         req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/booking");
         req.contentType(ContentType.JSON);
-        req.body(postpayload);
+        req.body(bookingpayload);
 
         res=req.when().post();
 
         var=res.then();
         var.statusCode(200);
-        bookingId=res.then().log().all().extract().path("bookingid");
-        System.out.println(bookingId);
+        bookingid=res.then().log().all().extract().path("bookingid");
+        System.out.println("Booking id got generated :"+bookingid);
+
     }
+
     @Test
     public void partialupdate()
     {
-      System.out.println("--Updated selected fields--");
-      String updatepayload="{\n" +
-              "    \"firstname\" : \"Abhilash\",\n" +
-              "    \"lastname\" : \"Teja\"\n" +
-              "}";
+        String partialpayload="{\n" +
+                "    \"firstname\" : \"Mukesh\",\n" +
+                "    \"lastname\" : \"Ambani\"\n" +
+                "}\n";
 
-      req=RestAssured.given();
-      req.baseUri("https://restful-booker.herokuapp.com");
-      req.basePath("/booking/"+bookingId);
-      req.contentType(ContentType.JSON);
-      req.cookie("token",token);
-      req.body(updatepayload);
+        req=RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking/"+bookingid);
+        req.cookie("token",token);
+        req.contentType(ContentType.JSON);
+        req.body(partialpayload);
 
-      res=req.when().patch();
+        res=req.when().patch();
 
-      var=res.then().log().all();
-      var.statusCode(200);
-      var.body("firstname", Matchers.equalTo("Abhilash"));
-      var.body("lastname",Matchers.equalTo("Teja"));
+        var=res.then();
+        var.statusCode(200);
+        var.body("firstname",Matchers.equalTo("Mukesh"));
+        var.body("lastname",Matchers.equalTo("Ambani"));
+
+
 
     }
 }

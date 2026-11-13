@@ -16,4 +16,10 @@ public class DependsonSetup {
     {
         System.out.println("Followed by me");
     }
+
+    @Test(dependsOnMethods = "runprogram")
+    public void output()
+    {
+        System.out.println("View the console for result");
+    }
 }

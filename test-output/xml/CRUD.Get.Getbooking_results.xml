@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.102">
+           time="2.190">
     <properties></properties>
 
 
 
             <testcase
                 name="getbooking"
-                time="2.102"
+                time="2.190"
                 classname="CRUD.Get.Getbooking">
             </testcase>
 </testsuite>

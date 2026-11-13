@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.007">
+           time="0.005">
     <properties></properties>
 
 
 
             <testcase
                 name="testuserlogin"
-                time="0.002"
+                time="0.000"
                 classname="DDT.DDT01">
             </testcase>
             <testcase

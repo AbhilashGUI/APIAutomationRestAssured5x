@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.644">
+           time="0.897">
     <properties></properties>
 
 
 
             <testcase
                 name="partialupdate"
-                time="1.644"
+                time="0.897"
                 classname="TestNG.Partialupdatebyfetchingprerequisites">
             </testcase>
 </testsuite>

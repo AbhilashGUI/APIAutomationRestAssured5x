@@ -10,22 +10,22 @@ import org.testng.annotations.Test;
 
 public class Deletebookingbyfetchingprerequisites {
 
-    String token;
-    Integer bookingId;
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
+    String token;
+    int bookingid;
 
     @BeforeTest
-    public void getoken()
+    public void createtoken()
     {
-        String authpayload= "{\n" +
+
+        String authpayload="{\n" +
                 "    \"username\":\"admin\",\n" +
                 "    \"password\":\"password123\"\n" +
                 "\n" +
                 "}";
-
-        req= RestAssured.given();
+        req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/auth");
         req.contentType(ContentType.JSON);
@@ -35,13 +35,15 @@ public class Deletebookingbyfetchingprerequisites {
 
         var=res.then();
         var.statusCode(200);
-        token=res.then().log().all().extract().path("token");
-        System.out.println(token);
+        token=res.then().extract().path("token");
+        System.out.println("Token > :"+token);
+
     }
+
     @BeforeTest
-    public void getbookingid()
-    {
-        String postpayload="{\n" +
+    public void createbooking() {
+
+        String bookingpayload = "{\n" +
                 "    \"firstname\" : \"Abhilash\",\n" +
                 "    \"lastname\" : \"Sharma\",\n" +
                 "    \"totalprice\" : 142,\n" +
@@ -52,35 +54,45 @@ public class Deletebookingbyfetchingprerequisites {
                 "    },\n" +
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
-
-        req=RestAssured.given();
+        req = RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/booking");
         req.contentType(ContentType.JSON);
-        req.body(postpayload);
+        req.body(bookingpayload);
 
-        res=req.when().post();
+        res = req.when().post();
 
-        var=res.then();
+        var = res.then();
         var.statusCode(200);
-        bookingId=res.then().log().all().extract().path("bookingid");
-        System.out.println(bookingId);
-
+        bookingid = res.then().extract().path("bookingid");
+        System.out.println("Booking id >" + bookingid);
     }
 
     @Test
-    public void deletbooking()
+    public void deletetoken()
     {
         req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
-        req.basePath("/booking/"+bookingId);
+        req.basePath("/booking/"+bookingid);
         req.cookie("token",token);
 
         res=req.when().delete();
 
-        var=res.then().log().all();
-        var.statusCode(201);
-
+        var=res.then().statusCode(201);
 
     }
+
+    @Test
+    public void fetchthedeletedbooking()
+    {
+        req=RestAssured.given();
+        req.baseUri("https://restful-booker.herokuapp.com");
+        req.basePath("/booking/"+bookingid);
+        System.out.println("Deleted booking is not found: "+bookingid);
+        res=req.when().get();
+
+        var=res.then();
+        var.statusCode(404);
+    }
+
 }

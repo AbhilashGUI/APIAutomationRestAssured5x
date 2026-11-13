@@ -10,17 +10,17 @@
 
 
             <testcase
-                name="loginviaotp"
+                name="logincred"
                 time="0.000"
                 classname="DDT.DDT02">
             </testcase>
             <testcase
-                name="loginviaotp"
+                name="logincred"
                 time="0.001"
                 classname="DDT.DDT02">
             </testcase>
             <testcase
-                name="loginviaotp"
+                name="logincred"
                 time="0.004"
                 classname="DDT.DDT02">
             </testcase>

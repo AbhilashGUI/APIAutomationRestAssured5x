@@ -12,6 +12,6 @@
             <testcase
                 name="pojopostreq"
                 time="3.147"
-                classname="Misc.NonGson.PostRunnerclass">
+                classname="Serialization.NonGson.PostRunnerclass">
             </testcase>
 </testsuite>

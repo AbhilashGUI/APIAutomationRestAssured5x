@@ -8,39 +8,35 @@ import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
 import org.testng.annotations.Test;
 
-public class Partialupdatebooking
-{
+public class Partialupdatebooking {
+
     RequestSpecification req;
     Response res;
     ValidatableResponse var;
-    String token="d561063692f323c";
-
-
+    String token="21be38f48d2ebb0";
     @Test
-    public void partialupdate()
-    {
+    public void minorupdate() {
+        String payload="{\n" +
+                "    \"firstname\" : \"Rohith\",\n" +
+                "    \"lastname\" : \"Sharma\"\n" +
+                "}\n";
 
-        String payload= "{\n" +
-                "    \"firstname\" : \"Shreyansh\",\n" +
-                "    \"lastname\" : \"Sree\"\n" +
-                "}";
 
-        req= RestAssured.given();
+
+        req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
-        req.basePath("/booking/618");
+        req.basePath("/booking/2295");
         req.contentType(ContentType.JSON);
         req.cookie("token",token);
-        req.body(payload).log().all();
+        req.body(payload);
+
 
         res=req.when().patch();
 
-        var=res.then().log().all();
+        var=res.then();
         var.statusCode(200);
-        var.body("firstname", Matchers.equalTo("Shreyansh"));
-        var.body("lastname", Matchers.equalTo("Sree"));
-
-
-
+        var.body("firstname",Matchers.equalTo("Rohith"));
+        var.body("lastname",Matchers.equalTo("Sharma"));
 
 
 

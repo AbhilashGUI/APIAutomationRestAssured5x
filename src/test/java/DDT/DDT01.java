@@ -2,6 +2,7 @@ package DDT;
 
 import org.testng.annotations.Test;
 
+
 public class DDT01 {
 
 // Test Data to be read from the Excel File - Data Provider
@@ -13,7 +14,7 @@ public class DDT01 {
 
     // Excel -> There is no support directly in Java to Read the Excel file
     // Apache POI library is used
-    // Excel - 2007 - xls, 2007 -> xlsx , CSV - comma seperated values
+    // Excel - 2007 - xls, 2007 -> xlsx , CSV - comma separated values
 
 
     // Example:username, password , ER , AR, name, age, phone, CSV
@@ -21,10 +22,12 @@ public class DDT01 {
     // JSON Object -> Gson, Jackson you can use
 
 
-    @Test(dataProvider = "getdata",dataProviderClass = UtilExcel.class)
+   @Test(dataProvider = "getdata",dataProviderClass = UtilExcel.class)
     public void testuserlogin(String Username,String Password)
-    {
-        System.out.println("Username--"+ Username);
-        System.out.println("Password--"+Password);
+   {
+       System.out.println("Username > "+Username);
+       System.out.println("Passoword > "+Password);
+   }
+
     }
-}
+

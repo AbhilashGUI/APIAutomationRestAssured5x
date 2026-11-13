@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="C:/Users/Abhilash Sharma/IdeaProjects/APIAutomationRestAssured5X/src/test/java/ListenerDemo/Listenerrun2.java"
+<testsuite name="APIAutomationRestAssured5X"
            tests="2"
            failures="1"
            errors="0"
            skipped="0"
-           time="0.023">
+           time="0.015">
     <properties></properties>
 
             <testcase
                 name="testcase1"
-                time="0.022"
+                time="0.014"
                 classname="ListenerDemo.Listenerrun2">
 
             <failure type="java.lang.AssertionError" message="expected [false] but found [true]">

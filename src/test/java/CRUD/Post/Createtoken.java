@@ -9,26 +9,35 @@ import org.testng.annotations.Test;
 
 public class Createtoken {
 
+
+
     @Test
     public void createtoken()
     {
-        String payload="{\n" +
+        String payload2="{\n" +
                 "    \"username\":\"admin\",\n" +
                 "    \"password\":\"password123\"\n" +
                 "\n" +
                 "}";
 
-
         RequestSpecification req=RestAssured.given();
         req.baseUri("https://restful-booker.herokuapp.com");
         req.basePath("/auth");
         req.contentType(ContentType.JSON);
-        req.body(payload);
+        req.body(payload2);
 
-        Response res=req.when().post();
 
-        ValidatableResponse var=res.then().log().all();
-        var.statusCode(200);
+        Response rp=req.when().post();
+
+        ValidatableResponse vr=rp.then();
+        String token=rp.asString();
+        System.out.println("Token "+token);
+        vr.statusCode(200);
+
+
+
+
+
     }
 
-}
+   }
